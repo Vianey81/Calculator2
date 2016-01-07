@@ -1,5 +1,5 @@
 #Pair programming by emilymlam & vianey81
-from arithmetic import *
+from arithmetic_plus import *
 
 valid_entries = ["+","-","*","/","square","cube","pow","mod"]
 print "This is a calculator. Enter a valid math operator to find the answer or enter 'q' to exit. Valid operators are:"
@@ -7,7 +7,7 @@ print ",".join(valid_entries)
 print "For example, to add 2 and 2, input: + 2 2\n"
 
 while True:
-    tokens = raw_input("Enter a math function: ").split(" ")
+    tokens = raw_input("Enter a math function: ").rstrip().split(" ")
     for i in range(1,len(tokens)):
          
         if  (tokens[i].rfind('.') == -1):
@@ -20,7 +20,7 @@ while True:
         break
     else:
         if tokens[0]=="+":
-            print add(tokens[1],tokens[2])
+            print add(tokens[1:])
         if tokens[0]=="-":
             print subtract(tokens[1],tokens[2])
         if tokens[0]=="*":
