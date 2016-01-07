@@ -5,8 +5,12 @@ def add(numbers):
         total += number
     return total
 
-def subtract(num1, num2):
-    return num1 - num2
+def subtract(numbers):
+    total = numbers[0]
+    for number in numbers[1:]:
+        total -= number
+
+    return total
 
 def multiply(num1, num2):
     return num1 * num2

@@ -12,6 +12,7 @@ while True:
          
         if  (tokens[i].rfind('.') == -1):
             tokens[i] = int(tokens[i])
+            #print tokens[i]
         else:
             tokens[i] = float(tokens[i])
 
@@ -22,7 +23,7 @@ while True:
         if tokens[0]=="+":
             print add(tokens[1:])
         if tokens[0]=="-":
-            print subtract(tokens[1],tokens[2])
+            print subtract(tokens[1:])
         if tokens[0]=="*":
             print multiply(tokens[1],tokens[2]) 
         if tokens[0]=="/":
