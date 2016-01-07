@@ -9,7 +9,11 @@ print "For example, to add 2 and 2, input: + 2 2\n"
 while True:
     tokens = raw_input("Enter a math function: ").split(" ")
     for i in range(1,len(tokens)):
-        tokens[i] = int(tokens[i])
+         
+        if  (tokens[i].rfind('.') == -1):
+            tokens[i] = int(tokens[i])
+        else:
+            tokens[i] = float(tokens[i])
 
     if tokens[0] not in valid_entries:
         print "That's not a valid entry. Exiting."
