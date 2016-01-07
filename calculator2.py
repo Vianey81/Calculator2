@@ -1,11 +1,13 @@
 #Pair programming by emilymlam & vianey81
 from arithmetic import *
 
-print "Please enter a math function: "
 valid_entries = ["+","-","*","/","square","cube","pow","mod"]
+print "This is a calculator. Enter a valid math operator to find the answer or enter 'q' to exit. Valid operators are:"
+print ",".join(valid_entries)
+print "For example, to add 2 and 2, input: + 2 2\n"
 
 while True:
-    tokens = raw_input().split(" ")
+    tokens = raw_input("Enter a math function: ").split(" ")
     for i in range(1,len(tokens)):
         tokens[i] = int(tokens[i])
 
